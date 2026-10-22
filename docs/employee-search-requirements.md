@@ -14,7 +14,8 @@ Help administrators find employee records quickly.
 
 \- Allow an optional department filter.
 
-\- Display a helpful message and suggest checking the search filters when no employees match.
+
+- Display an accessible, helpful no-results message and suggest checking the search filters when no employees match.
 
 \- Preserve existing employee list behavior when no search filters are supplied.
 
