@@ -2,6 +2,7 @@ using System.Threading.RateLimiting;
 using EmployeeOperationsMvc.Middleware;
 using Microsoft.AspNetCore.Authentication.Cookies;
 using Microsoft.AspNetCore.RateLimiting;
+Console.WriteLine("Hello Git");
 var builder = WebApplication.CreateBuilder(args);
 
 // Keep existing builder creation and service registrations.
