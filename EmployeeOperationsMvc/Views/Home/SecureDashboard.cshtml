@@ -1,0 +1,21 @@
+﻿@* File: Views/Home/SecureDashboard.cshtml *@
+@{
+    ViewData["Title"] = "Secure dashboard";
+}
+
+<h1>Secure dashboard</h1>
+<p>This page requires an authenticated user.</p>
+
+<p>
+    Signed in as:
+    <strong>@(User.Identity?.Name ?? "Unknown user")</strong>
+</p>
+
+<p>
+    Authentication status:
+    <strong>@(User.Identity?.IsAuthenticated == true ? "Authenticated" : "Not authenticated")</strong>
+</p>
+
+<form asp-controller="Home" asp-action="Logout" method="post">
+    <button type="submit" class="btn btn-outline-danger">Sign out</button>
+</form>

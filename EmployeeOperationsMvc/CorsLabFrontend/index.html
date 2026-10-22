@@ -1,0 +1,39 @@
+﻿<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>CORS Lab Client</title>
+</head>
+<body>
+    <h1>CORS Lab Client</h1>
+    <button id="callApi">Call integration endpoint</button>
+    <pre id="result">Click the button to call the API.</pre>
+
+    <script>
+    const apiUrl = "https://localhost:7070/integration/employee-summary";
+
+    document.getElementById("callApi").addEventListener("click", async () => {
+      const result = document.getElementById("result");
+      result.textContent = "Requesting...";
+
+      try {
+        const response = await fetch(apiUrl, {
+          method: "GET",
+          headers: {
+            // If the endpoint does not require an API key, remove this header.
+            "X-API-Key": "YOUR_DEVELOPMENT_API_KEY"
+          }
+        });
+
+        const body = await response.text();
+        result.textContent = `HTTP ${response.status}\n${body}`;
+      } catch (error) {
+        result.textContent =
+          "Browser could not expose the response. Check DevTools Console and Network.\n" +
+          error.message;
+      }
+    });
+    </script>
+</body>
+</html>
