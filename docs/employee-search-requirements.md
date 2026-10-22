@@ -14,7 +14,7 @@ Help administrators find employee records quickly.
 
 \- Allow an optional department filter.
 
-\- Display a clear message when no employees match.
+\- Display an accessible, clearly worded no-results message when no employees match.
 
 \- Preserve existing employee list behavior when no search filters are supplied.
 
@@ -39,8 +39,4 @@ Help administrators find employee records quickly.
 \- Authentication or authorization changes.
 
 \- Changes to application startup configuration.
-
-
-
-
 
